@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -48,6 +48,17 @@ devDependencies:
     version: 3.1.0(sass@1.32.0)
 
 packages:
+
+  /@ag-grid-community/core@30.2.0:
+    resolution: {integrity: sha512-BdRavyYxyl0rx3w4VKQlV9KHRR9TIJ9RFt4FIsWUxC+VDC+VEL64J1PzgJqXqgkM7Zmb+rYbluA2UPmRrQQJ9A==}
+    dev: false
+
+  /@ag-grid-community/vue3@30.2.0:
+    resolution: {integrity: sha512-yDmVF4L7I5osM2Fh3CyWgxk5ZKD+qEW4cCmO7Wd1RCO9HEq99Xechjd4eaf6CcbGFpuuGuWTMOMsWSX48k0x9w==}
+    dependencies:
+      '@ag-grid-community/core': 30.2.0
+      vue: 3.2.47
+    dev: false
 
   /@babel/helper-string-parser@7.21.5:
     resolution: {integrity: sha512-5pTUx3hAJaZIdW99sJ6ZUUgWq/Y+Hja7TowEnLNMm1VivRgZQL3vpBY3qUACVsvw+yQU6+YgfBVmcbLaZtrA1w==}
@@ -240,6 +251,24 @@ packages:
 
   /@vue/shared@3.2.47:
     resolution: {integrity: sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==}
+
+  /ag-grid-community@30.2.0:
+    resolution: {integrity: sha512-Gd6GXmtzEQSCDloBdRxxCDqnjTBRAOf/zzlaxxyyVBJgc+cePuNgGdplRUhT/rwIiDwvyuoynvxelVE/iYdXsA==}
+    dev: false
+
+  /ag-grid-enterprise@30.2.0:
+    resolution: {integrity: sha512-rOP52n8NyA4doBBYj9crIcYd5vN62nTOOB9552l9hNPDX9oKy8I6jGqXUIoGuQDg4oLkQIoddZ+vv0W+Mf9kYg==}
+    dev: false
+
+  /ag-grid-vue3@30.2.0(ag-grid-community@30.2.0)(vue@3.2.47):
+    resolution: {integrity: sha512-tckZTjYAmjV0bnvGshpLmvWZO17sxsSSslJy8Rh8HMlRYJqTt8yuZKePi+uyZxHNeQYjDdOpF+OkISuyJlvGzA==}
+    peerDependencies:
+      ag-grid-community: ~30.2.0
+      vue: ^3.0.0
+    dependencies:
+      ag-grid-community: 30.2.0
+      vue: 3.2.47
+    dev: false
 
   /anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
@@ -770,13 +799,16 @@ packages:
     resolution: {directory: ../commons/_shared/bs-lib-components/ui, type: directory}
     id: file:../commons/_shared/bs-lib-components/ui
     name: quasar-ui-bs
-    version: 1.4.1
     peerDependencies:
       axios: 1.4.0
       lodash: ^4.17.21
       quasar: 2.12.0
       vue: 3.2.47
     dependencies:
+      '@ag-grid-community/vue3': 30.2.0
+      ag-grid-community: 30.2.0
+      ag-grid-enterprise: 30.2.0
+      ag-grid-vue3: 30.2.0(ag-grid-community@30.2.0)(vue@3.2.47)
       axios: 1.4.0
       lodash: 4.17.21
       quasar: 2.12.0
